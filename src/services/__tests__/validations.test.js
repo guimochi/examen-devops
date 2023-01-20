@@ -19,8 +19,13 @@ describe("validations tests suites - isEmpty", () => {
 
 // TODO: Create tests suite for validation function
 describe("validations tests suites - validateGamerTag", () => {
-    test("should return false as gamertad is empty", () => {
+    test("should return false as gamertag is empty", () => {
         const result = validateGamerTag("");
         expect(result).toBe(false);
+    });
+
+    test("should return true as gamertag have 8 chars", () => {
+        const result = validateGamerTag("acbdefgh");
+        expect(result).toBe(true);
     });
 });
