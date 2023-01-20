@@ -6,6 +6,9 @@ const validateGamerTag = (gamerTag) => {
     if (!/[0-9]/.test(gamerTag)) {
         return false;
     }
+    if (!/[!@#%^&*(),\.?":{}|<>]/.test(gamerTag)) {
+        return false;
+    }
     return true;
 };
 
