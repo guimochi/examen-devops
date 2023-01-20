@@ -1,5 +1,5 @@
 const { isEmpty } = require("../validations");
-
+const { validateGamerTag } = require("../validations");
 describe("validations tests suites - isEmpty", () => {
     test("should return true as the label is undefined", () => {
         const result = isEmpty();
@@ -18,3 +18,9 @@ describe("validations tests suites - isEmpty", () => {
 });
 
 // TODO: Create tests suite for validation function
+describe("validations tests suites - validateGamerTag", () => {
+    test("should return false as gamertad is empty", () => {
+        const result = validateGamerTag("");
+        expect(result).toBe(false);
+    });
+});
