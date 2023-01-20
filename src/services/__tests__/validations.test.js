@@ -28,4 +28,9 @@ describe("validations tests suites - validateGamerTag", () => {
         const result = validateGamerTag("acbdefgh");
         expect(result).toBe(true);
     });
+
+    test("should return true as gamertag have less than 8 chars", () => {
+        const result = validateGamerTag("acbdef");
+        expect(result).toBe(false);
+    });
 });
