@@ -24,13 +24,13 @@ describe("validations tests suites - validateGamerTag", () => {
         expect(result).toBe(false);
     });
 
-    test("should return true as gamertag have 8 chars", () => {
-        const result = validateGamerTag("acbdefgh");
+    test("should return true as gamertag have 8 chars and 1 digit", () => {
+        const result = validateGamerTag("acbdefgh1");
         expect(result).toBe(true);
     });
 
-    test("should return true as gamertag have less than 8 chars", () => {
-        const result = validateGamerTag("acbdef");
+    test("should return false as gamertag have no digit", () => {
+        const result = validateGamerTag("acbdefgh");
         expect(result).toBe(false);
     });
 });
