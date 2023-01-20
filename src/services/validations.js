@@ -1,5 +1,8 @@
 // TODO: Add here the function to validate
 const validateGamerTag = (gamerTag) => {
+    if (gamerTag.length >= 8) {
+        return true;
+    }
     return false;
 };
 
