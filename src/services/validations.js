@@ -1,9 +1,12 @@
 // TODO: Add here the function to validate
 const validateGamerTag = (gamerTag) => {
-    if (gamerTag.length >= 8) {
-        return true;
+    if (!(gamerTag.length >= 8)) {
+        return false;
     }
-    return false;
+    if (!/[0-9]/.test(gamerTag)) {
+        return false;
+    }
+    return true;
 };
 
 const isEmpty = (label) => !label || label.length === 0;
